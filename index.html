@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Visual Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="stage"></div>
+
+    <section id="ui">
+        <div class="outer-panel" id="object-list">
+            <div class="inner-panel" id="parent">
+                <h4>parent</h4>
+            </div>
+
+            <div class="inner-panel" id="children">
+                <h4>children</h4>
+            </div>
+        </div>
+
+        <div class="outer-panel" id="object-editor">
+            <div class="inner-panel" id="structures">
+                <h4>structures</h4>
+                <div class="button" onclick="addSample(this, 0)">add</div>
+            </div>
+
+            <div class="inner-panel" id="attributes">
+                <h4>attributes</h4>
+                <div class="button" onclick="addSample(this, 0)">add</div>
+            </div>
+
+            <div class="inner-panel" id="properties">
+                <h4>properties</h4>
+                <div class="button" onclick="addSample(this, 0)">add</div>
+            </div>
+
+            <div class="inner-panel" id="children">
+                <h4>children</h4>
+                <div class="button" onclick="addSample(this, 1)">add</div>
+            </div>
+        </div>
+    </section>
+
+    <template id="default-pair-form"><div class="sample">
+        <div class="input"></div>
+        <div class="input" contenteditable="true"></div>
+    </div></template>
+
+    <template id="pair-form"><div class="sample">
+        <div class="input" contenteditable="true"></div>
+        <div class="input" contenteditable="true"></div>
+        <div class="button" id="remove-button" onclick="deleteSample(this)">-</div>
+    </div></template>
+
+    <template id="default-single-form"><div class="sample">
+        <div class="input"></div>
+    </div></template>
+
+    <template id="single-form"><div class="sample">
+        <div class="input" contenteditable="true"></div>
+        <div class="button" id="remove-button" onclick="deleteSample(this)">-</div>
+    </div></template>
+
+    <script src="script.js"></script>
+</body>
+</html>

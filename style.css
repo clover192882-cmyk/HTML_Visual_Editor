@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.outer-panel{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    position: fixed;
+
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+
+    transition: 0.1s;
+    scrollbar-color: white transparent;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+
+    color: white;
+    background-color: rgb(50, 50, 50);
+
+    h4{color: #97b6ff;}
+
+    .button{
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+        height: fit-content;
+
+        padding: 5px 10px;
+        border-radius: 10px;
+
+        cursor: pointer;
+        filter: brightness(1.2);
+
+        color: inherit;
+        background-color: inherit;
+    }
+
+    .button:hover{filter: brightness(1.5);}
+
+    .inner-panel{
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        height: fit-content;
+        
+        gap: 5px;
+
+        color: inherit;
+        background-color: inherit;
+
+        .sample{
+            display: flex;
+            flex-direction: row;
+
+            width: 100%;
+            height: fit-content;
+
+            gap: 5px;
+
+            color: inherit;
+            background-color: inherit;
+
+            .input{
+                width: 100%;
+                min-height: 1rem;
+
+                padding: 5px 10px;
+                outline: none;
+                border: none;
+                border-radius: 10px;
+
+                filter: brightness(1.2);
+
+                color: inherit;
+                background-color: inherit;
+            }
+            
+            .input:hover{filter: brightness(1.5);}
+            #remove-button{width: fit-content; height: fit-content; color: red;}
+        }
+    }
+}
+
+#object-list{
+    display: none;
+
+    width: 200px;
+    height: 200px;
+
+    .input{
+        cursor: pointer;
+    }
+}
+
+#object-editor{
+    top: 20px;
+    right: -370px;
+    
+    width: 350px;
+    height: calc(100vh - 20px * 2);
+}
